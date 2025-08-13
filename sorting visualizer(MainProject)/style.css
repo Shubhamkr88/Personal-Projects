@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: #003366;
+  background-image: linear-gradient(315deg, #003366 0%, #242124 74%);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#heading,
+#toolsUsed {
+  text-align: center;
+  color: #ffffff;
+}
+
+#arrSize {
+  width: 200px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+/*  */
+#selectAlgo {
+  font-weight: bold;
+  background-color: #f5f5f5;
+  padding: 10px;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#label,
+#algoSelect {
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+}
+#algoselect {
+  background-color: #d0d0d0;
+}
+#algoSelect:hover {
+  background-color: #d3d3d3;
+}
+
+#algoSelect option {
+  font-weight: bold;
+  border: none;
+}
+
+/*added speed settings*/
+#sliderSettings {
+  display: flex;
+  align-items: center ;
+  gap: 10px;
+}
+#sliderSettings button {
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #d0d0d0;
+  border: none;
+  cursor: pointer;
+}
+#sliderSettings button:hover {
+  background-color: #bababa;
+}
+#sliderSettings button:active {
+  background-color: #d0d0d0;
+}
+/**/
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 205px;
+}
+.buttons button {
+  margin: 0px 5px 0px 0px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 150ms;
+}
+#generate:hover,
+#sort:hover {
+  background-color: #d0d0d0;
+  scale: 1.05;
+}
+
+#genArray,
+#sortedArray {
+  font-size: 20px;
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.barContainer {
+  width: 100%;
+  height: 350px;
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px;
+  background-color: #fffffff2;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.barContainer .bar {
+  background-color: #4fbb07;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: background-color 0.5s ease;
+  font-weight: bold;
+  position: relative;
+}
+
+/* For mobile devices (max width 600px) */
+@media screen and (max-width: 600px) {
+  #heading,
+  #toolsUsed {
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  #arrSize {
+    width: 120px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  #selectAlgo {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+  #algoSelect {
+    font-size: 13px;
+    padding: 5px 5px;
+    font-weight: bold;
+    border: none;
+  }
+
+  #genArray,
+  #sortedArray {
+    font-size: 15px;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 5px;
+    max-height: 100px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+
+  #sliderSettings {
+    flex-direction: row ;
+  }
+  #sliderSettings p {
+    max-width: 80px;
+    font-weight: bold ;
+  }
+  #sliderSettings button {
+    padding: 5px 10px;
+  }
+}

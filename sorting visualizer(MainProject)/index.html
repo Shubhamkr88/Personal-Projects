@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sorting simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="headingContainer">
+        <h1 id="heading">Sorting Visualizer</h1>
+        <p id="toolsUsed"></p>
+      </div>
+
+      <div class="input">
+        <input
+          type="number"
+          placeholder="size of array"
+          name="arrSize"
+          id="arrSize"
+        />
+      </div>
+
+      <div id="selectAlgo">
+        <!-- added new id algoContainer for using flex properties to add speed slider to end-->
+        <div id="algoContainer">
+          <!-- removed for="algoSelect" from label -->
+          <label id="label">Choose sorting algorithm : </label>
+          <select id="algoSelect">
+            <option value="bubble">Bubble Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="merge">Merge Sort</option>
+          </select>
+        </div>
+        <!-- added 2x and 4x buttons -->
+        <div id="sliderSettings">
+          <p>Speed : </p>
+          <button id="normal">
+            1x
+          </button> 
+          <button id="2x">
+            2x
+          </button> 
+          <button id="4x">
+            4x
+          </button>
+        </div>
+      </div>
+
+      <div class="barContainer"></div>
+
+      <div class="buttons">
+        <button id="generate">Generate</button> <br />
+        <button id="sort">sort</button>
+      </div>
+
+      <div id="genArray">Generated Array</div>
+      <div id="sortedArray">Sorted Array</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- improve ui mainly now then add merge and quick sort as well -->
